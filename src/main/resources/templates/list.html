@@ -2,13 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>List</title>
 </head>
 <body>
-    <a href="/add">Add an actor</a>
+    <a href="/add">Add an actor</a><br /><br />
     <div th:each="actor : ${actors}">
         <div th:if="${actor.headshot} != null">
-            <img th:src="@{actor.headshot}" />
+            <img th:src="${actor.headshot}" th:height="100px" th:width="80px"/>
             <hr />
         </div>
         <h3 th:text="${actor.name}"></h3>
